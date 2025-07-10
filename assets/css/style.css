@@ -171,6 +171,19 @@ p {
     0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset,
     0px 1px 2px 0px rgba(10, 13, 18, 0.05);
 }
+.gridient_clr {
+  background: linear-gradient(
+    88deg,
+    rgba(30, 88, 252, 0.8) 7.18%,
+    rgba(164, 39, 235, 0.8) 18.48%,
+    rgba(217, 20, 228, 0.8) 23.58%,
+    rgba(225, 15, 163, 0.8) 30.69%,
+    rgba(241, 4, 25, 0.8) 39.8%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .heroSwiper .swiper-pagination {
   display: flex;
   text-align: left;
@@ -226,7 +239,7 @@ p {
 .hero_sec {
   max-height: calc(100vh - 80px);
   margin-top: 80px;
-  padding: 50px 0px 50px 0px;
+  padding: 60px 0px 50px 0px;
 }
 .hero_main {
   display: flex;
@@ -238,7 +251,8 @@ p {
   text-align: left;
 }
 .hero_image img {
-  max-height: calc(100vh - 160px);
+  /* max-height: calc(100vh - 160px); */
+  border-radius: 8px;
   width: 100%;
   max-width: 600px;
 }
@@ -683,7 +697,7 @@ body::-webkit-scrollbar-thumb {
   margin-left: 78px;
   padding-top: 80px;
 }
-.swiper-wrapper {
+.success_stories_sec .swiper-wrapper {
   padding-top: 100px;
 }
 
@@ -972,15 +986,15 @@ body::-webkit-scrollbar-thumb {
   border-top: 1px solid #1f222c;
   margin-top: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
-.footer_bar_logo {
+/* .footer_bar_logo {
   display: flex;
   align-items: center;
   gap: 24px;
-}
+} */
 
 @media screen and (max-width: 992px) {
   .main-nav #nav-toggler {
@@ -1012,7 +1026,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #e8eeff;
   }
   .hero_sec {
-    margin-top: 0;
+    padding: 50px 0px 0px 0px;
   }
   .hero_main {
     flex-wrap: wrap;
@@ -1080,6 +1094,9 @@ body::-webkit-scrollbar-thumb {
     overflow: unset;
     height: unset;
   }
+  .hero_sec {
+    max-height: unset;
+  }
 }
 @media screen and (max-width: 500px) {
   .cards-container {
@@ -1122,9 +1139,9 @@ body::-webkit-scrollbar-thumb {
     margin-top: 30px;
   }
   .heroSwiper .swiper-wrapper {
-    margin-bottom: 12px;
+    margin-bottom: 35px;
   }
-  .footer_column{
+  .footer_column {
     min-width: unset;
   }
 }
