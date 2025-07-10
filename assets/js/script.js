@@ -1,15 +1,24 @@
 {
   $(document).ready(function () {
+    // Toggle menu on icon click
     $("#nav-toggler").on("click", function () {
       $(this).toggleClass("fa-times");
       $(".nav-items").toggleClass("show");
     });
+
+    // Change navbar background on scroll
     $(window).on("scroll load", function () {
       if ($(window).scrollTop() > 0) {
         $(".main-nav").addClass("bgchange");
       } else {
         $(".main-nav").removeClass("bgchange");
       }
+    });
+
+    // Close menu on link click (for mobile)
+    $(".nav-items a").on("click", function () {
+      $(".nav-items").removeClass("show");
+      $("#nav-toggler").removeClass("fa-times");
     });
   });
 }
