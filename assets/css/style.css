@@ -995,6 +995,21 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   gap: 24px;
 } */
+#phone2 .iti__country-list {
+  height: 200px;
+}
+#phone2 .iti__country-list {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
 
 @media screen and (max-width: 992px) {
   .main-nav #nav-toggler {
@@ -1143,6 +1158,22 @@ body::-webkit-scrollbar-thumb {
   }
   .footer_column {
     min-width: unset;
+  }
+
+  #phone2 {
+    position: relative;
+  }
+
+  #phone2 .iti__country-list {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
   }
 }
 

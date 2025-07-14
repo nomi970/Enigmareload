@@ -854,7 +854,7 @@
                         <label for="email">Email <span style="color: #AD1925;">*</span></label>
                         <input class="mt_12" type="email" name="email" id="email" placeholder="you@company.com">
                     </div>
-                    <div class="mt_24" style="position: relative;">
+                    <div class="mt_24" style="position: relative;" id="phone2">
                         <label for="phone" style="display: block;">Phone number <span
                                 style="color: #AD1925;">*</span></label>
                         <input id="phone" name="phone" type="tel" class="mt_12" placeholder="">
@@ -865,12 +865,6 @@
                         <textarea class="mt_12" name="message" id="message"
                             placeholder="Leave us a message..."></textarea>
                     </div>
-                    <!-- <div class="d-flex align-items-start gap-2 mt_20">
-                        <input style="width: 20px !important;height: 20px;" type="checkbox" name="checkbox"
-                            id="checkbox">
-                        <label for="checkbox" class="font__16_400 font_Raleway text_gray">I’d like to occasionally
-                            receive other communication from Stellar, such as contact and product news</label>
-                    </div> -->
                     <button class="font_16 fw_600"
                         style="background-color: #1570EF;color: white;color: white;border-radius: 50px;padding: 10px;border: 0;width: 100%;margin-top: 32px;cursor: pointer;"
                         type="submit">Send message</button>
@@ -994,7 +988,26 @@
     <script src="./assets/js/script.js"></script>
     <!-- Intl-Tel-Input JS -->
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const phoneInput = document.getElementById("phone");
 
+    // const iti = window.intlTelInput(phoneInput, {
+    //   initialCountry: "pk",
+    //   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.1.1/js/utils.js"
+    // });
+
+    // Move the dropdown into the phone wrapper (#phone2)
+    phoneInput.addEventListener("open:countrydropdown", function () {
+      const countryList = document.querySelector(".iti__country-list");
+      const phoneWrapper = document.getElementById("phone2");
+
+      if (countryList && phoneWrapper && !phoneWrapper.contains(countryList)) {
+        phoneWrapper.appendChild(countryList);
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
