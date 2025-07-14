@@ -1003,7 +1003,7 @@ body::-webkit-scrollbar-thumb {
   top: 100% !important;
   left: 0 !important;
   width: 100% !important;
-  max-width: 480px !important;
+  /* max-width: 480px !important; */
   max-height: 300px;
   overflow-y: auto;
   z-index: 10000;
