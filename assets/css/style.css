@@ -505,7 +505,7 @@ body::-webkit-scrollbar-thumb {
 /* Keep h3 always visible and pinned to bottom */
 .card-content h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   color: white;
